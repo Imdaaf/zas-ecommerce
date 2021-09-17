@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Playfair Display', serif;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.anclas {
+  padding: 5px;
+  list-style: none;
+}
+
+.carrito {
+  height: 30px;
+  width: 30px;
+}
+.logo {
+  height: 40px;
+  width: 40px;
+}
