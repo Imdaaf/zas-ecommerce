@@ -13,14 +13,31 @@ export default function ItemCount() {
   };
 
   return (
-    <div className="contador">
-      <button onClick={onAdd} className="suma">
-        +
-      </button>
-      <input disabled value={count} className="cantidad" />
-      <button onClick={restar} className="resta">
+    <div className="contenedorContador">
+      <div className="d-flex justify-content-center contador">
+     
+        <button
+          className="col-2 resta btn btn-dark border-light btn-block"
+          onClick={restar}
+        >
         -
-      </button>
+        </button>
+        <input
+          className="border-light col-2 form-control text-center"
+          type="text"
+          disabled
+          value={count}
+          readonly
+        />
+        <button className="col-2 suma btn btn-dark border-light btn-block" onClick={onAdd}>
+        +
+        </button>
+        
+        </div>
+        <button className="btn btn-dark border-light btn-block " onClick={}>
+      Agregar carrito
+        </button>
+        
     </div>
   );
 }

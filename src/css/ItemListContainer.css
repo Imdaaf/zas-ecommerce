@@ -2,11 +2,25 @@
 
 .lista {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: bold;
   margin: 10px;
 }
 .fotoProducto {
-  width: 200px;
-  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 220px;
+}
+.listadoProductos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.contador {
+  display: flex;
+  flex-direction: row;
 }

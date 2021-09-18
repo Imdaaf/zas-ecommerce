@@ -9,14 +9,8 @@ export default function App() {
       <header className="header">
         <Navegador />
       </header>
-      <h1
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          fontFamily: 'Playfair Display',
-        }}
-      >
-        Bienvenidos al e-commerce
+      <h1 className="text-center mt-4">
+        Tienda Expelliarmus
       </h1>
       <section>
         <ItemListContainer />

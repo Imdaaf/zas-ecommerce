@@ -13,14 +13,14 @@ export default function ItemListContainer({ onAdd }) {
       setLoading(false);
     });
   }, []);
-  console.log(productos);
   return (
     <div className="lista">
-      <h2>Productos</h2>
       {loading ? (
         <h2>Cargando productos...</h2>
       ) : (
-        <ItemList productos={productos} />
+        <div className="listadoProductos">
+          <ItemList productos={productos} />
+        </div>
       )}
     </div>
   );

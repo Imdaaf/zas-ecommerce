@@ -3,17 +3,25 @@ import ItemCount from './ItemCount';
 
 const Item = ({ producto }) => {
   return (
-    <div key={producto.id} className="card w-50 mt-5">
-      <div className="card-header bg-white">{producto.titulo}</div>
+    <div
+      key={producto.id}
+      className="contenedorProductos border-dark card mt-5"
+      style={{ width: '17rem' }}
+    >
+      <img
+        src={producto.img}
+        className="card-img-top fotoProducto"
+      />
       <div className="card-body">
-        <img src={producto.img} className="fotoProducto" />${producto.precio}
-      </div>
-      <div className="card-footer">
-        <button className="btn btn-outline-dark btn-block">
+        <div className="card-title mt-2 text-center">{producto.titulo}</div>
+        <div className="">
+          <p className="text-center"> ${producto.precio}</p>
+        </div>
+        <ItemCount stock={5} initial={1} />
+        <button className="btn btn-dark border-light btn-block">
           Detalle producto
         </button>
       </div>
-      <ItemCount stock={5} initial={1} />
     </div>
   );
 };

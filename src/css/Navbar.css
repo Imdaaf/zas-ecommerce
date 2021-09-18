@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
-a {
-  text-decoration: none;
-  color: black;
-  font-family: 'Playfair Display', serif;
-}
 .menu {
   display: flex;
   flex-direction: row;
@@ -21,6 +16,15 @@ a {
   width: 30px;
 }
 .logo {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: auto;
+}
+.home,
+.tienda,
+.productos {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  color: aliceblue;
+  font-family: 'Playfair Display', serif;
 }
