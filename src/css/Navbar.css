@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
 
 .menu {
   display: flex;
@@ -20,11 +20,12 @@
   width: auto;
 }
 .home,
-.tienda,
+.ayuda,
 .productos {
   text-align: center;
   text-decoration: none;
   font-weight: bolder;
-  color: aliceblue;
-  font-family: 'Playfair Display', serif;
+  color: #a67d03;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
 }

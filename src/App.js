@@ -1,20 +1,31 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams,
+} from 'react-router-dom';
 import './App.css';
+import Home from './components/Home.js';
 import ItemListContainer from './components/ItemListContainer';
 import Navegador from './components/NavBar';
+import Cart from './components/Cart';
 
 export default function App() {
   return (
-    <div>
-      <header className="header">
-        <Navegador />
-      </header>
-      <h1 className="text-center mt-4">
-        Tienda Expelliarmus
-      </h1>
-      <section>
-        <ItemListContainer />
-      </section>
-    </div>
+    <Router>
+      <Navegador />
+      <Home />
+      <Switch>
+        <Route path="/" exact component={ItemListContainer} />
+        <Route
+          path="/categoria/:idCategoria"
+          exact
+          component={ItemListContainer}
+        />
+        <Route path="" />
+        <Route path="/cart" exact component={Cart} />
+      </Switch>
+    </Router>
   );
 }
