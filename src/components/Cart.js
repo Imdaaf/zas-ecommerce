@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCartContext } from '../../Context/cartContext';
+import { useCartContext } from '../Context/cartContext';
 
 const Cart = ({ condition = true }) => {
   const { cartList } = useCartContext();
