@@ -1,15 +1,24 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
-export default function ItemCount() {
-  const [count, setCount] = useState(1);
-  const onAdd = () => {
-    const cantidadTotal = count + 1;
-    setCount(cantidadTotal);
+export default function ItemCount({ stock, initial, onAdd }) {
+  const [count, setCount] = useState(initial);
+  const [changeButton, setChangeButton] = useState(true);
+
+  const sumar = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    }
   };
   const restar = () => {
-    const cantidadTotal = count - 1;
-    setCount(cantidadTotal);
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
+  const agregarCarrito = () => {
+    onAdd(count);
+    setChangeButton(false)
   };
 
   return (
@@ -30,14 +39,28 @@ export default function ItemCount() {
         />
         <button
           className="col-2 suma btn btn-dark border-light btn-block"
-          onClick={onAdd}
+          onClick={sumar}
         >
           +
         </button>
       </div>
-      <button className="btn btn-dark border-light btn-block " onClick={onAdd}>
-        Agregar carrito
-      </button>
+      {changeButton ? (
+        <button
+          className="btn btn-dark border-light btn-block "
+          onClick={agregarCarrito}
+        >
+          Agregar carrito
+        </button>
+      ) : (
+        <div>
+          <Link to="/cart">
+            <button>Terminar Compra</button>
+          </Link>
+          <Link to="/">
+            <button>Seguir Comprando</button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
